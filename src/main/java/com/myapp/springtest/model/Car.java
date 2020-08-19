@@ -20,6 +20,12 @@ public class Car {
     @Column(name = "car_model")
     private String carModel;
 
+    @Column(name = "car_price")
+    private float carPrice;
+
+    @Column(name = "car_info")
+    private String carInfo;
+
     public Long getId() {
         return id;
     }
@@ -44,12 +50,30 @@ public class Car {
         this.carModel = carModel;
     }
 
+    public float getCarPrice() {
+        return carPrice;
+    }
+
+    public void setCarPrice(float carPrice) {
+        this.carPrice = carPrice;
+    }
+
+    public String getCarInfo() {
+        return carInfo;
+    }
+
+    public void setCarInfo(String carInfo) {
+        this.carInfo = carInfo;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
                 "id=" + id +
                 ", carMark='" + carMark + '\'' +
                 ", carModel='" + carModel + '\'' +
+                ", carPrice=" + carPrice +
+                ", carInfo='" + carInfo + '\'' +
                 '}';
     }
 }
